@@ -1,0 +1,130 @@
+<!About html>
+<html>
+<head>
+    <title>About</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        img {
+            max-height: 90px; /* Adjust the height as needed */
+            width: auto;
+            display: block;
+        }
+
+        .vertical-align {
+            vertical-align: top;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+
+<div align="middle">
+    <h1> Lab:112306043 </h1>
+</div>
+
+<table>
+    <tr>
+        <td rowspan="3" class="vertical-align">
+            <img src="393972641_1301436563853011_7918289398138994962_n.jpg" alt="Personal Photo">
+
+            <p>Personal Photo</p>
+        </td>
+        <th>Name:
+        
+           <p> <td colspan="3">
+            <input type="name" name="name" value="卓珙奇"><br>
+            <input type="radio" name="gender" value="male" checked> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other
+        </p>
+
+        </td>
+        </td>
+        
+    </tr>
+    <tr>
+        <th>County:</th>
+        <td>
+            <select>
+                <option value="taipei" selected>Taipei</option>
+                <option value="tainan">Tainan</option>
+                <option value="taichung">Taichung</option>
+                <option value="taoyuan">Taoyuan</option>
+            </select>
+        </td>
+        <th>Birthday:</th>
+        <td>
+            <input type="date" name="birthday" value="2005-06-27">
+        </td>
+    </tr>
+    <tr>
+        <th>E-mail:</th>
+        <td colspan="3">
+            <input type="email" name="email" value="alexzhuotw@gmail.com">
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>Hobby</th>
+        <td>
+            <input type="checkbox" id="swimming"  name="hobby" value="swimming">
+            <label for="swimming">Swimming</label>
+            <input type="checkbox" id="volleyball" name="hobby" value="volleyball">
+            <label for="volleyball">Volleyball</label>
+            <input type="checkbox" id="movie" checked name="hobby" value="movie">
+            <label for="movie">Movie</label>
+            <input type="checkbox" id="game" checked name="hobby" value="game">
+            <label for="game">Game</label>
+            <input type="checkbox" id="sleep" checked name="hobby" value="sleep">
+            <label for="sleep">Sleep</label>
+        </td>
+    </tr>
+    <tr>
+        <th>Skill</th>
+        <td>
+            <input type="checkbox" id="java" checked  name="skill" value="java">
+            <label for="java">Java</label>
+            <input type="checkbox" id="html" checked name="skill" value="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="python" name="skill" value="python">
+            <label for="python">Python</label>
+            <input type="checkbox" id="office" checked name="skill" value="office">
+            <label for="office">Microsoft Office</label>
+            <input type="checkbox" id="premiere" name="skill" value="premiere">
+            <label for="premiere">Premiere</label>
+        </td>
+    </tr>
+    <tr>
+        <th>Say something</th>
+        <td><p>計概真好，這課有料<br><br><br><br><br></p>
+            
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
