@@ -15,46 +15,15 @@
     }
 
     button {
-      padding: 15px; /* Adjust the padding to make the buttons larger */
-      font-size: 16px; /* Adjust the font size as needed */
-    }
+      padding: 15px; 
+      font-size: 16px;     }
 
     }
   </style>
 </head>
 <body>
 
-<script>
-  function getUserInput(promptText) {
-    return parseFloat(alert(promptText));
-  }
 
-  function showInput(buttonNumber) {
-    var inputText;
-    if (buttonNumber === 1) {
-      inputText = "First Input: " + document.getElementById('input1').innerText;
-    } else {
-      inputText = "Second Input: " + document.getElementById('input2').innerText;
-    }
-    alert(inputText);
-  }
-
-  function compareInputs() {
-    var input1 = parseFloat(document.getElementById('input1').innerText);
-    var input2 = parseFloat(document.getElementById('input2').innerText);
-
-    if (input1 > input2) {
-      document.body.style.backgroundColor = 'lightblue';
-      document.getElementById('background-info').innerText = "First Input > Second Input";
-    } else if (input2 > input1) {
-      document.body.style.backgroundColor = 'orange';
-      document.getElementById('background-info').innerText = "Second Input > First Input";
-    } else {
-      document.body.style.backgroundColor = 'lightyellow';
-      document.getElementById('background-info').innerText = "Second Input == First Input";
-    }
-  }
-</script>
 
 
 <script>
