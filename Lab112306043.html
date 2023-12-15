@@ -1,72 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Input Comparison</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-
-    #background-info {
-      margin-top: 20px;
-    }
-
-    button {
-      padding: 15px; 
-      font-size: 16px;     }
-
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Comparison</title>
 </head>
 <body>
 
+    <script>
+        var firstInput = parseFloat(prompt("Enter the first number:"));
+        var secondInput = parseFloat(prompt("Enter the second number:"));
 
+ 
+            if (firstInput > secondInput) {
+                document.body.style.backgroundColor = 'lightblue';
+                document.writeln("<h1>" + "firstInput" + " > " + "secondInput "+ "</h1>");
+            } else if (secondInput > firstInput) {
+                document.body.style.backgroundColor = 'orange';
+                document.writeln("<h1>" + "firstInput" + " < " + "secondInput "+ "</h1>");
+            } else {
+                document.body.style.backgroundColor = 'lightyellow';
+         document.writeln("<h1>" + "firstInput" + " == " + "secondInput "+ "</h1>");
+            }
+       
+        
+        var showFirstButton = document.createElement("button");
+        showFirstButton.innerHTML = "Show the First Input";
+        showFirstButton.onclick = function() {
+            alert("First Input: " + firstInput);
+        };
+        document.body.appendChild(showFirstButton);
 
+        var showSecondButton = document.createElement("button");
+        showSecondButton.innerHTML = "Show the Second Input";
+        showSecondButton.onclick = function() {
+            alert("Second Input: " + secondInput);
+        };
+        document.body.appendChild(showSecondButton);
 
-<script>
-    var input1;
-    var input2;
-
-    input1 = window.prompt("Please enter input1");
-    input2 = window.prompt("Please enter input2");
-</script>
-
-<script>
-if (input1 > input2) {
-    alert('firstInput>secondInput');
-    document.body.style.backgroundColor = 'lightblue';
-    document.getElementById('background-info').innerText = "First Input > Second Input";
-  } else if (input2 > input1) {
-     alert('firstInput<secondInput');
-    document.body.style.backgroundColor = 'orange';
-    document.getElementById('background-info').innerText = "Second Input > First Input";
-  } else {
-     alert('firstInput=secondInput');
-    document.body.style.backgroundColor = 'lightyellow';
-    document.getElementById('background-info').innerText = "Second Input == First Input";
-  }
-
-  
-  function showInput(buttonNumber) {
-    var inputValue;
-    if (buttonNumber === 1) {
-      inputValue = "First Input: " + input1;
-    } else {
-      inputValue = "Second Input: " + input2;
-    }
-    alert(inputValue);
-  }
-</script>
-
-
-<button onclick="showInput(1)">Show 1st Input</button>
-<button onclick="showInput(2)">Show 2nd Input</button>
-
-
+    </script>
 
 </body>
 </html>
-
