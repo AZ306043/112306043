@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Roller</title>
+</head>
+<body>
+
+<button id="rollButton">Roll Dice</button>
+<div id="result"></div>
+
+<script>
+function start() {
+  var button = document.getElementById("rollButton");
+  button.addEventListener("click", rollDice, false);
+}
+
+function rollDice() {
+  var resultDiv = document.getElementById("result");
+  resultDiv.innerHTML = ""; 
+
+  var percentages = [16.67, 16.67, 16.67, 16.67, 16.67, 16.67]; 
+
+  var frequencyTable = [0, 0, 0, 0, 0, 0]; 
+
+  for (var i = 0; i < 12; i++) {
+    var face = getWeightedRandomFace(percentages);
+    setImage(i + 1, face);
+    frequencyTable[face]++;
+  }
+
+  updateFrequencyTable(frequencyTable);
+}
+
+function getWeightedRandomFace(percentages) {
+  var randomNum = Math.random() * 100;
+  var cumulativePercent = 0;
+
+  for (var i = 0; i < percentages.length; i++) {
+    cumulativePercent += percentages[i];
+
+    if (randomNum <= cumulativePercent) {
+      return i; 
+    }
+  }
+
+  
+  return 0;
+}
+
+function setImage(dieNumber, face) {
+  var resultDiv = document.getElementById("result");
+
+  var imagePath = "die" + (face + 1) + ".png";
+  var imgElement = document.createElement("img");
+  imgElement.src = imagePath;
+  imgElement.alt = "Die " + (face + 1);
+  resultDiv.appendChild(imgElement);
+}
+
+function updateFrequencyTable(frequencyTable) {
+  var resultDiv = document.getElementById("result");
+  resultDiv.innerHTML += "<h2>Frequency Table</h2>";
+
+  var table = "<table><tr><th>Face</th><th>Percent</th></tr>";
+
+  for (var i = 0; i < frequencyTable.length; i++) {
+    var face = i + 1;
+    var probability = (frequencyTable[i] / 12) * 100;
+    
+    
+    table += "<tr><td>" + face + "</td><td>" + probability.toFixed(2) + "%</td></tr>";
+  }
+
+  table += "</table>";
+  resultDiv.innerHTML += table;
+}
+
+window.addEventListener("load", start, false);
+</script>
+
+</body>
+</html>
+
+
