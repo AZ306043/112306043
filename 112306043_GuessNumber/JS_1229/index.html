@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Number Game</title>
+  <script src="guessNumber.js" defer></script>
+  <style>
+    .centered-image {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" style="text-align: center; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <h1 style="color: #333;">Guess the Number Game</h1>
+    <p>Guess a number between 1 and 10:</p>
+
+    <input type="number" id="userGuess" placeholder="Enter your guess">
+    <button onclick="checkGuess()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Check Guess</button>
+
+    <div id="result" style="margin-top: 20px; font-weight: bold; color: #d9534f;"></div>
+    <img id="resultImage" class="centered-image" style="display: none; max-width: 100%;" alt="Result Image">
+    <audio id="resultAudio" style="display: none;" controls></audio>
+  </div>
+
+</body>
+</html>
